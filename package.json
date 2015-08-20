@@ -1,0 +1,36 @@
+{
+  "name": "ng-bridge-samples",
+  "version": "0.1.0",
+  "description": "Sample usage of ng-bridge",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p ./app",
+    "build-html": "cp ./app/*.html ./dist",
+    "bundle": "webpack ./dist/bootstrap.js ./dist/bundle.js",
+    "build-js-lib": "cp ./node_modules/angular/angular.js ./dist",
+    "start": "npm run build && npm run build-html && npm run build-js-lib && npm run bundle && (cd dist && http-server -o)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Brocco/ng-bridge-samples.git"
+  },
+  "keywords": [
+    "angular",
+    "typescript"
+  ],
+  "author": "Mike Brocchi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Brocco/ng-bridge-samples/issues"
+  },
+  "homepage": "https://github.com/Brocco/ng-bridge-samples",
+  "devDependencies": {
+    "angular": "^1.4.3",
+    "http-server": "^0.8.0",
+    "typescript": "^1.5.3",
+    "webpack": "^1.11.0"
+  },
+  "dependencies": {
+    "ng-bridge": "^0.1.0"
+  }
+}

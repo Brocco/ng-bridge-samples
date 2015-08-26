@@ -1,9 +1,11 @@
-import { ComponentBridge } from 'ng-bridge';
+import { ComponentBridge as Component, ViewBridge as View } from 'ng-bridge';
 import { IPerson } from './iperson';
 
-@ComponentBridge({
+@Component({
   selector: 'app',
   controllerAs: 'app',
+})
+@View({
   template: `
     <ul>
       <li ng-repeat="p in app.people">

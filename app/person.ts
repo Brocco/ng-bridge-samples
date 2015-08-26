@@ -1,10 +1,12 @@
-import { ComponentBridge } from 'ng-bridge';
+import { ComponentBridge as Component, ViewBridge as View } from 'ng-bridge';
 import { IPerson } from './iperson';
 
-@ComponentBridge({
+@Component({
   selector: 'person',
   controllerAs: 'person',
   properties: ['firstName', 'lastName'],
+})
+@View({
   template: `
     <span>{{person.firstName}} {{person.lastName}}</span>
   `
